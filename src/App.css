@@ -1,0 +1,443 @@
+/* App.css */
+
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+img,
+.disable-selection,
+br {
+  user-select: none;
+}
+
+/* General styles */
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: rgb(24, 25, 26);
+  color: rgb(16, 138, 228);
+  font-family: "Poppins", sans-serif;
+}
+
+h2::selection {
+  color: rgb(255, 255, 255);
+  background: rgba(0, 136, 255, 0.25);
+}
+
+p::selection {
+  color: rgb(255, 255, 255);
+  background: rgba(0, 136, 255, 0.2);
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+h2 {
+  font-size: 2rem;
+  color: rgb(255, 255, 255);
+}
+
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #18191a;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #329cee17;
+}
+
+.header-push-down {
+  height: 8vh;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+main hr {
+  border: 0;
+  background-color: aliceblue;
+  height: 0.8px;
+  margin: 28px 80px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  background-color: rgb(24, 25, 26);
+  padding: 0 40px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  list-style: none;
+  margin: 0 30px;
+}
+
+/* Adjusted selector for "services.html" */
+nav ul li a[href="services.html"] {
+  margin-right: 80px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.829);
+}
+
+nav ul li a:hover {
+  text-decoration: none;
+  color: rgb(16, 138, 228);
+  transition: 0.4s;
+}
+
+.left {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.left img {
+  height: 80px;
+}
+
+.left .blue {
+  font-size: 2rem;
+  font-weight: 100;
+  margin: 0 5px;
+  color: rgb(17, 135, 223);
+}
+
+.left .white {
+  font-size: 2rem;
+  font-weight: 100;
+  margin: 0 5px;
+  color: aliceblue;
+}
+
+.left a {
+  text-decoration: none;
+}
+
+/* Styles for the first section (Welcome) */
+.firstsection {
+  display: flex;
+  padding: 1.5vh 0;
+  justify-content: space-around;
+  align-items: center;
+  height: 75vh;
+}
+
+.firstsection .leftSection {
+  display: flex;
+  align-items: center;
+  width: 57%;
+  margin: 0 50px;
+  color: floralwhite;
+  font-size: 2.5rem;
+  pointer-events: none;
+}
+
+/* ... (Continued) - Add styles for the rest of your CSS */
+
+/* Styles for the Contact Section */
+.contactSection {
+  box-sizing: border-box;
+  width: 100vw;
+  padding: 130px 10vw;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8%;
+  transition: 0.5s;
+}
+
+.contactSection div p {
+  color: rgb(144, 198, 239);
+  margin: 15px 0 25px;
+}
+
+.leftContact {
+  width: 60%;
+}
+
+.rightContact {
+  width: 40%;
+}
+
+/* ... (Continued) - Add styles for the form */
+
+/* Styles for the popup */
+#popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #242526;
+  padding: 40px;
+  box-shadow: 2px 2px 15px 0px #243f59;
+  color: white;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+  border-radius: 2%;
+  z-index: 2;
+}
+
+/* ... (Continued) - Add styles for other components */
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .contactContainer {
+    display: block;
+    padding: 20px;
+  }
+
+  form {
+    padding: 0 10px;
+  }
+
+  .footer {
+    flex-wrap: wrap;
+  }
+
+  .footer-fourth {
+    padding-top: 20px;
+  }
+}
+
+/* second section */
+
+.secondSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 85vh;
+  pointer-events: none;
+}
+
+.second-section-container {
+  height: 70%;
+  width: 80%;
+  display: flex;
+}
+
+.second-section-container .leftSection {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  width: 45%;
+  pointer-events: none;
+} 
+.second-section-container .rightSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 35%;
+  flex-grow: 1;
+} 
+.second-section-container img {
+  margin-right: 3%;
+  height: 80%;
+}
+
+.second-section-container h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: aliceblue;
+}
+.text-gradient-blue-white {
+  background:linear-gradient(to left,rgb(96 186 253),floralwhite) ;
+  background-clip: text;
+  -webkit-background-clip : text ;
+  -webkit-text-fill-color: transparent;
+  font-weight: 500;
+} 
+
+/* contact section */
+.contactSection {
+  box-sizing: border-box;
+  width: 100vw;
+  padding: 130px 10vw;
+  text-align: center;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  gap: 8%;
+  transition: 0.5s;
+}
+
+.contactSection div p {
+  color: rgb(144, 198, 239);
+  margin: 15px 0 25px;
+}
+
+
+.leftContact {
+  width: 60%;
+}
+.rightContact {
+  width: 40%;
+}
+
+.leftContact img {
+  width: 70%;
+  object-fit: contain;
+}
+
+/* form validation*/
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px ;
+  margin-bottom: 32px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif, "Poppins", sans-serif;
+}
+
+input:focus, textarea:focus  {
+  outline: none;
+  border: 1.5px solid #007bff !important;
+}
+
+input::selection, textarea::selection {
+  color: rgb(255, 255, 255);
+  background: rgb(12, 134, 153);
+}
+
+form textarea {
+  resize: none;
+}
+
+form button , #close {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 12px;
+  font-size: 20px;
+  font-weight: bolder;
+  cursor: pointer;
+  user-select: none;
+}
+
+form button[type="submit"]:hover , #close:hover {
+  background-color: #0056b3;
+  transition: 0.15s;
+}
+
+#popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #242526;
+  padding: 40px;
+  box-shadow: 2px 2px 15px 0px #243f59;
+  color: white;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+  border-radius: 2%;
+  z-index: 2;
+}
+
+#popup p {
+  font-size: 1rem;
+}
+
+#close {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.blurred {
+  filter: blur(2px);
+  pointer-events: none;
+  user-select: none;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+#popup.active {
+  visibility: visible;
+  opacity: 1;
+  transition: 0.5s;
+}
+
+/* footer */
+footer {
+  background-color:#242526;
+  height: 145px;
+}
+.footer {
+  display: flex;
+  padding: 20px 50px;
+  justify-content: space-evenly ;
+}
+.footer ul{
+    text-decoration: none;
+    list-style: none;
+}
+.footer h3 {
+  margin: 0;
+  font-size: 24px;
+}
+.footer ul h4 {
+  margin-bottom: 8px;
+}
+
+
+ footer .footer-rights{
+    bottom: 0;
+    text-align: center;
+    color: grey;
+    padding: 10px;
+    background-color: #222;
+  }
+.footer-fourth {
+  display: flex;
+  align-items: center;
+}
+.footer-fourth a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+}
+.footer a {
+  text-decoration: none;
+  color: white;
+}
+.footer a:hover {
+  text-decoration: none;
+  color: rgb(16, 138, 228);
+  transition: 0.5s;
+}
+.footer-fourth a img {
+  width: 40px;
+  margin-right: 5px;
+}
